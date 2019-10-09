@@ -359,3 +359,20 @@ Valid options:
 | Default  | CLI Override                                                | API Override                                               |
 | -------- | ----------------------------------------------------------- | ---------------------------------------------------------- |
 | `"auto"` | <code>--end-of-line <auto&#124;lf&#124;crlf&#124;cr></code> | <code>endOfLine: "<auto&#124;lf&#124;crlf&#124;cr>"</code> |
+
+## Brace Style
+
+Brace style is closely related to indent style in programming and describes the placement of braces relative to their control statement and body. There are probably a dozen, if not more, brace styles in the world.
+
+The "one true brace style" is one of the most common brace styles in JavaScript, in which the opening brace of a block is placed on the same line as its corresponding statement or declaration.
+
+One common variant of one true brace style is called "Stroustrup", in which the `else` statements in an `if-else` construct, as well as `catch` and `finally`, must be on its own line after the preceding closing brace.
+
+Valid options:
+
+- `"1tbs"` - Use "one true brace style" common brace style.
+- `"stroustrup"` - Use "Stroustrup" brace style.
+
+| Default | CLI Override                    | API Override                      |
+| ------- | ------------------------------- | --------------------------------- |
+| `1tbs`  | `--brace-style`                 | `braceStyle: "<1tbs|stroustrup>"` |
