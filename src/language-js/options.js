@@ -71,7 +71,7 @@ module.exports = {
     ]
   },
   braceStyle: {
-    since: "1.19.0",
+    since: "1.18.2",
     category: CATEGORY_JAVASCRIPT,
     type: "choice",
     default: "1tbs",
