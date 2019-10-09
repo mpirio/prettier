@@ -859,6 +859,90 @@ function doSmth() {
 }
 ```
 
+#### JavaScript: Manage "Stroustrup" brace style ([#] by [@mpirio])
+
+Manage Stroustrup brace style, in which the `else` statements in an `if-else` construct, as well as `catch` and `finally`, must be on its own line after the preceding closing brace.
+
+With `braceStyle: "stroustrup"`:
+
+<!-- prettier-ignore -->
+```js
+// Input
+if (a) { b = 2; } else { b = 3; }
+
+if (a) {
+    b = 2;
+} else {
+    b = 3;
+}
+
+do {
+    b++;
+} while (a)
+
+try {
+    a = 1;
+} catch (error) {
+    console.error(error);
+} finally {
+    b = 2;
+}
+
+// Output (Prettier stable)
+if (a) {
+  b = 2;
+} else {
+  b = 3;
+}
+
+if (a) {
+  b = 2;
+} else {
+  b = 3;
+}
+
+do {
+  b++;
+} while (a);
+
+try {
+  a = 1;
+} catch (error) {
+  console.error(error);
+} finally {
+  b = 2;
+}
+
+// Output (Prettier master)
+if (a) {
+  b = 2;
+}
+else {
+  b = 3;
+}
+
+if (a) {
+  b = 2;
+}
+else {
+  b = 3;
+}
+
+do {
+  b++;
+} while (a);
+
+try {
+  a = 1;
+}
+catch (error) {
+  console.error(error);
+}
+finally {
+  b = 2;
+}
+```
+
 [#5910]: https://github.com/prettier/prettier/pull/5910
 [#6033]: https://github.com/prettier/prettier/pull/6033
 [#6186]: https://github.com/prettier/prettier/pull/6186
@@ -897,3 +981,4 @@ function doSmth() {
 [@thorn0]: https://github.com/thorn0
 [@dcyriller]: https://github.com/dcyriller
 [@rreverser]: https://github.com/RReverser
+[@mpirio]: https://github.com/mpirio
